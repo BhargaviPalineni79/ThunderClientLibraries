@@ -23,4 +23,5 @@ uninstall.cmake
 *.pyc
 */*/*/Makefile
 */*/*/cmake_install.cmake
+*/*/*/*Config.cmake
 */*/*/*ConfigVersion.cmake

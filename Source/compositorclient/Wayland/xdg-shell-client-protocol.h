@@ -458,13 +458,10 @@ xdg_wm_base_get_version(struct xdg_wm_base *xdg_wm_base)
 static inline void
 xdg_wm_base_destroy(struct xdg_wm_base *xdg_wm_base)
 {
-	    printf("1234 ----- :%s:%s:%d \n", __FILE__, __func__, __LINE__);
 	wl_proxy_marshal((struct wl_proxy *) xdg_wm_base,
 			 XDG_WM_BASE_DESTROY);
-	    printf("%s:%s:%d \n", __FILE__, __func__, __LINE__);
-fflush(stdout);
-//	wl_proxy_destroy((struct wl_proxy *) xdg_wm_base);
-	    printf("%s:%s:%d \n", __FILE__, __func__, __LINE__);
+
+	wl_proxy_destroy((struct wl_proxy *) xdg_wm_base);
 }
 
 /**
